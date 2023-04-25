@@ -1,8 +1,9 @@
-* {
+* *::before, *::after {
   margin: 0;
   padding: 0;
+  outline: 0;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -23,8 +24,76 @@ body {
 
 p {
   color: white;
+  margin: 35px 0;
 }
 
 hr {
-  color: green;
+  width: 100%;
 }
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  color: cyan;
+}
+
+section {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.contador {
+  width: 24.7%;
+  text-align: center;
+  display: inline-block;
+}
+
+.contador-cantidad {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 900;
+  color: yellowgreen;
+}
+
+svg {
+  width: 80px;
+  height: 80px;
+}
+
+.web {
+  color: gray;
+}
+
+.facebook {
+  color: rgb(66, 103, 178);
+}
+
+.youtube {
+  color: rgb(255, 0, 0);
+}
+
+.twitter {
+  color: rgb(29, 161, 242);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.disguise {
+  opacity: 0;
+}
+
+.animate {
+  animation: appear 1.3s;
+}
+
+
