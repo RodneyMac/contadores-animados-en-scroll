@@ -78,13 +78,11 @@ svg {
 
 @keyframes appear {
   0% {
-    opacity: 0;
-    transform: translateY(100px);
+    transform: scale(0.1, 0.1);
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: scale(1, 1);
   }
 }
 
@@ -93,7 +91,7 @@ svg {
 }
 
 .animate {
-  animation: appear 1.3s;
+  animation: appear 1.3s ease;
 }
 
 

@@ -18,7 +18,21 @@ addEventListener("DOMContentLoaded", () => {
       actualizar_contador();
     }
   }
-  //animarContadores();
-  // IntersectionObserver
-  const observer = new IntersectionObserver(mostrarContadores)
+ 
+  const mostrarIconos = (e) => {
+    e.forEach(element => {
+      if(element.isIntersecting) {
+        element.target.classList.add('animate');
+        element.target.classList.remove('disguise');
+        setTimeout(animarContadores, 300);
+      }
+    });
+  }
+  const observer = new IntersectionObserver(mostrarIconos, {
+    threshold: 0.75
+  })
+  const elementosHTML = document.querySelectorAll('.contador');
+  elementosHTML.forEach(elementHTML => {
+    observer.observe(elementHTML);
+  });
 })
